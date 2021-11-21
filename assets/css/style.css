@@ -1,0 +1,381 @@
+/*Нормализируем стили*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body{
+	height: 100%;
+}
+
+a{
+	text-decoration: none;
+	color: lightblue;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+header a,
+header a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+body{
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #666
+}
+
+input,
+button{
+	outline: none;
+	border: none;
+}
+
+img{
+	display: inline-block;
+	max-width: 100%;
+	width: 100%;
+}
+
+ul,li{
+	list-style: none;
+}
+
+/*Создаем главный контейнер для контента и распологаем его по середине*/
+.container{
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/*Стилизируем шапку сайта*/
+
+.header__top{
+	width: 100%;
+	height: 60px;
+	background-color: #474646;
+}
+
+.header__top>.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navigation{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 526px
+}
+
+.nav-item{
+	font-size: 22px;
+	font-weight: 500;
+	position: relative;
+}
+
+.nav-item::after{
+	content: "";
+	position: absolute;
+	transition: .2s ease;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	top: 15px;
+	left: 0;
+	opacity: 0;
+}
+
+.nav-item:hover::after{
+	top: 26px;
+	opacity: 1;
+}
+
+.logo{
+	width: 100px;
+	height: 50px;
+}
+
+.search{
+	background-color: #989898;
+	border-radius: 50px;
+	width: 250px;
+	height: 28px;
+	padding: 0 10px;
+	color: #fff;
+	font-weight: 400;
+}
+
+.search__form{
+	display: flex;
+	align-items: center;
+}
+
+.btn_submt{
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	left: -50px;
+	background: #fff;
+}
+
+.btn_submt::before{
+	content: "\e903";
+	font-family: "icomoon";
+	position: absolute;
+	font-size: 22px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 500;
+}
+
+.clear{
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+	position: relative;
+	left: -30px;
+	transition: left .2s ease;
+}
+
+.clear::before{
+	font-family: "icomoon";
+	content: "\ea0f";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 14px;
+	color: orangered;
+}
+
+.search:focus ~ .clear{
+	left: -52px;
+}
+
+
+/*Стилизируем слайдер*/
+
+.swiper{
+	height: 705px;
+	background: #000;
+}
+
+.swiper-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+.swiper-slide{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.swiper-img{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+
+}
+
+.swiper-button-next{
+	margin-right:50px;
+	color: #fff;
+}
+
+.swiper-button-prev{
+	margin-left:50px;
+	color: #fff;
+}
+
+
+/*Стилизуем первую секцию*/
+.about__teams{
+	padding-top: 128px;
+}
+
+.section__title{
+	width: 540px;
+	margin: 0 auto;
+	font-weight: 500;
+	font-size: 36px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-bottom: 35px;
+}
+
+.circle{
+	width: 14px;
+	height: 14px;
+	background-color: #09E862;
+	border-radius: 50%;
+	position: relative;
+	margin: 0 12px;
+}
+
+.section__title::before{
+	content: "";
+	position: absolute;
+	width: 145px;
+	height: 2px;
+	background-color:#09E862;
+	left: 0;
+}
+
+.section__title::after{
+	content: "";
+	position: absolute;
+	width: 145px;
+	height: 2px;
+	background-color:#09E862;
+	right: 0;
+}
+
+.content-item>img{
+	max-width: 435px;
+	width: 100%;
+	height: 250px;
+}
+
+.section__content{
+	width: 1030px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.content-item{
+	display: flex;
+	flex-direction: row;
+	margin: 35px 0;
+	text-align: left;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.i-reverse{
+	flex-direction: row-reverse;
+}
+
+.content-text{
+	width: 530px;
+	font-size: 18px;
+}
+
+.content-text>span{
+	font-weight: 600;
+}
+
+/*Стилизируем вторую секцию*/
+
+.inter-facts{
+	margin-top: 140px;
+}
+
+.sec-title{
+	width: 685px;
+	display: flex;
+}
+
+
+img.team-icon{
+	max-width: 150px;
+	width: 100%;
+	height: 150px;
+}
+
+.facts-text{
+	width: 895px;
+	font-size: 18px;
+	margin-left: 50px;
+}
+
+/*Стилизируем третью секцию*/
+
+.top__players{
+	margin-top: 140px;
+}
+
+.thrd-cont>img{
+	max-width: 400px;
+	width: 100%;
+	height: 515px;
+}
+
+.nick>span{
+	font-weight: 600;
+	color: #B1C563;
+}
+
+/*Стилизируем подвал сайта*/
+footer{
+	width: 100%;
+	padding: 30px 0;
+	background-color: #474646;
+	position: relative;
+	bottom: 0px;
+}
+
+.footer__text{
+	width: 800px;
+}
+
+.authors__links{
+	display: flex;
+	flex-direction: column;
+}
+
+.authors__links>a{
+	margin: 25px 0;
+	padding: 0 50px;
+	position: relative;
+	align-items: center;
+	line-height: 30px;
+}
+
+.authors__links>a::before{
+	content: "\e900";
+  	color: #4680c2;
+	position: absolute;
+	font-family: 'icomoon';
+	top: 0;
+	left: 0;
+	font-size: 30px;
+}
+
+.copyright{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.authors{
+	width: 370px;
+	height: 500px;
+	border-radius: 50px;
+}
+
+footer>.container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
